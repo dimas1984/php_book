@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>  Studi Kasus </title>
+</head>
+</table>
+
+<body>
+    <form action="" method="GET">
+        <fieldset>
+            <legend> Data Mahasiswa </legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for=""> Nama </label>
+                        <br/><br/>
+                        <label for="">Email </label>
+                        <br/><br/>
+                        <label for=""> Tanggal lahir</label>
+                        <br/><br/>
+                        <label for=""> Jenis Kelamin </label>
+                    </td>
+                    <td>
+                        <input type="text" size="30" maxlength="100" name="nama" required="required">
+                        <br/><br/>
+                        <input type="email" size="30" maxlength="100" name="email" required="required">
+                        <br/><br/>
+                        <input type="date" size="30" maxlength="100" name="ttl">
+                        <br/><br/>
+                        <select name="JK" id="JK">
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="perempuan">Perempuan</option>
+                        </select>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+            <label for="">Alamat</label>
+            <br>
+            <textarea name="alamat" id="" cols="100" rows="10"></textarea>
+        </fieldset>
+       
+        <fieldset>
+                <legend>
+                    Komentar
+                </legend>
+                <p>
+                    <label for="hear-about">
+                        Darimana Anda mengetahui buku ini?
+                    </label>
+                    <select name="referrer" id="hear-about">
+                        <option value="google">Google</option>
+                        <option value="friend">Teman</option>
+                        <option value="advert">Iklan</option>
+                        <option value="other">Lain-Lain</option>
+                    </select>
+                </p>
+                <p>
+                    Bagaimana Menurut anda terhadap buku ini?
+                    <br />
+                    <label>
+                        <input type="radio" name="rating" value="biasa" /> Biasa
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="Bagus" /> Bagus
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="Menarik" /> Menarik
+                    </label>
+                </p>
+                <p>
+                    <label for="comments">
+                        Komentar Anda:
+                    </label>
+                    <br />
+                    <textarea rows="4" cols="40" id="comments">
+            </textarea>
+                </p>
+                <label>
+                    <input type="checkbox" name="subscribe" checked="checked" /> Kirim ke Email bila ada info terbaru
+                </label>
+                <br />
+                <!-- <input type="submit" value="Submit review" /> -->
+            </fieldset>
+            <p align="center">
+                    <button type="submit" size="10">Kirim</button>
+                </p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+#content-slider {
+   position: relative;
+   width: 400px;
+   height: 300px;
+   overflow: hidden;
+}
+
+#content-slider img {
+   display: block;
+   width: 400px;
+   height: 300px;
+}

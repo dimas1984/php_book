@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tugas Nama Kalian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({ dateFormat: "DD, dd/mm/yy" }).val()
+        });
+        function validateForm() {
+
+
+            var nama = document.forms["myForm"]["nama"].value;
+            var alamat = document.forms["myForm"]["alamat"].value;
+            var ttl = document.forms["myForm"]["ttl"].value;
+            var lk = document.forms["myForm"]["laki"].checked;
+            var wk = document.forms["myForm"]["wanita"].checked;
+            var swasta =document.forms["myForm"]["swasta"].checked;
+            var pns =document.forms["myForm"]["pns"].checked;
+            var lain =document.forms["myForm"]["lain"].checked;
+            var toggle=document.forms["myForm"]["toggle"].checked;
+            var btn=document.forms["myForm"]["btn"].disabled;
+
+            if (nama == "") {
+                alert('Nama harus di isi!');
+                return false;
+            } else if (alamat == "") {
+                alert('alamat harus di isi');
+                return false;
+            } else if (ttl == "") {
+                alert('tanggal lahir harus di isi');
+                return false;
+            } else if (lk == true && wk == true) {
+                alert('pilih salah satu Jenis Kelamin');
+                return false;
+            } else if(swasta==true && pns==true && lain==true)
+            {
+                alert('pilih salah satu jenis pekerjaan');
+                return false;
+            }else if(toggle==true)
+            {
+                // btn.disabled=false;
+                alert('Apakah Data Anda Sudah Benar');
+                // btn==true;
+                // return false;
+            }
+            else {
+              return true;
+          }
+        };
+      
+            function getValue() {
+                var firstName = document.getElementsById("nama").value;
+                var lastName = document.getElementsById("alamat").value;
+                var node = document.createTextNode("Hallo " + firstName + " " +lastName);
+            };
+            
+    </script>
+</head>
+
+<body>
+    <div>
+        <form id="myForm" onsubmit="return validateForm()" method="post">
+            <img src="../TUGAS/img/banner2.jpg" alt="" srcset="" height="100px" width="1000px">
+            <hr>
+            <table style="color:red" align="center">
+                <tr>
+                    <td>
+                        <label for="">Nama</label>
+                    </td>
+                    <td>
+                        <input type="" name="nama" value="" id="nama">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Alamat</label>
+                    </td>
+                    <td>
+                        <textarea name="alamat" cols="30" rows="10" id="alamat"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Tanggal lahir</label>
+                    </td>
+                    <td>
+                        <input type="" name="ttl" value="" id="datepicker">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Jenis Kelamin</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="laki" value="" >
+                        <label for="">Laki-Laki</label><br>
+                        <input type="checkbox" name="wanita" value="" >
+                        <label for="">Wanita</label><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Hobby</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Berenang</label>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Berlari</label>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Lain-Lain</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Pekerjaan</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="swasta" id="" >
+                        <label for="">Swasta</label>
+                        <input type="checkbox" name="pns" id="" >
+                        <label for="">PNS</label>
+                        <input type="checkbox" name="lain" id="">
+                        <label for="">Lain-Lain</label>
+
+                    </td>
+                </tr>
+
+                <tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="toggle"/>
+                        <span> Check Jika anda akan mengirimkan data ini</span>
+                    </td>
+                </tr>
+                <td>
+                        <button type="submit" onclick="getValue()" name="btn" >Cek!</button>
+                </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

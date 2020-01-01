@@ -1,0 +1,70 @@
+{
+	"folders": [
+		{
+			"path": "1.HTML"
+		},
+		{
+			"path": "1. HTML.HTML"
+		},
+		{
+			"path": "2. CSS"
+		},
+		{
+			"path": "3. JAVASCIPT"
+		},
+		{
+			"path": "4. JQUERY"
+		},
+		{
+			"path": "5. BOOTSTRAP"
+		},
+		{
+			"path": "6. PENGANTAR_PHP"
+		},
+		{
+			"path": "7. STRUKTUR_KENDALI"
+		},
+		{
+			"path": "8.ARRAY"
+		},
+		{
+			"path": "9.GET_POST"
+		},
+		{
+			"path": "10.PHPDB"
+		},
+		{
+			"path": "11.INSERT_DELETE"
+		},
+		{
+			"path": "12.UPDATE"
+		},
+		{
+			"path": "13.SEARCHING"
+		},
+		{
+			"path": "14.UPLOAD"
+		},
+		{
+			"path": "15.REGISTRASI"
+		},
+		{
+			"path": "16.LOGIN"
+		},
+		{
+			"path": "17.SESSION"
+		},
+		{
+			"path": "18.COOKIES"
+		},
+		{
+			"path": "19.PAGINATION"
+		},
+		{
+			"path": "Database"
+		},
+		{
+			"path": "20.REPORT_PDF"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Image Slider</title>
+<link rel="stylesheet" type="text/css" href="slidercss.css">
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="jquery.cycle.all.latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#content-slider').cycle({
+      fx: 'shuffle'
+    
+   });
+});
+</script>
+</head>
+<body>
+<div id="content-slider">
+   <img src="image/img1.jpg" alt="Slideshow 1" />
+   <img src="image/img2.jpg" alt="Slideshow 2" />
+   <img src="image/img3.jpg" alt="Slideshow 3" />
+</div>
+</body>
+</html>

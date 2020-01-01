@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Form Validasi</title>	
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="csslat3.css">
+</head>
+<body>
+	<h1>Pengumuman SBMPTN 2018</h1>	
+	<div class="kotak">		
+		<form method="post" class="form">
+			<input type="text" id="nama" name="nama" placeholder="Masukkan nomer pendaftaran anda..">
+			<span class="pesan pesan-nama">Isikan Nomer Pendaftaran Anda Terlebih Dahulu!</span><br/><br/>
+
+			<input type="submit" value="CEK">
+		</form>
+	</div>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.form').submit(function() {
+			var nama = $('#nama').val().length;			
+
+			if (nama == 0) {				
+				$(".pesan-nama").css('display','block');
+				return false;
+			}
+		});
+	});
+</script>
+</html>
+

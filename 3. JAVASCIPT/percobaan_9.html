@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Pengenalan JS</title>
+        <script type="text/javascript">
+            function showPrompt() {
+                var fullName = prompt('Please enter your full name!');
+                var par = document.createElement('p');
+                if (fullName != null) {
+                    var node = document.createTextNode('Hallo ' + fullName + '!');
+                    par.appendChild(node);
+                    document.getElementById('div').appendChild(par);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div">
+            <button type="submit" onclick="showPrompt()">Tampilkan Prompt!</button>
+        </div>
+    </body>
+</html>
+

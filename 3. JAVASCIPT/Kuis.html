@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Kuis </title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+    <script>
+        function proses() {
+            var nama = document.getElementById('nama');
+            var alamat = document.getElementById('alamat');
+            var ttl=document.getElementById('datepicker');
+            var hasil = document.getElementById('hasil');
+            hasil.innerHTML = ("nama Anda:" + nama.value + "<br>" + 
+            " Alamat anda:" + alamat.value +"<br>" +
+            "TTL:"+ttl.value);
+        };
+        $(function () {
+            $("#datepicker").datepicker({ dateFormat: "DD, dd/mm/yy" }).val()
+        });
+    </script>
+</head>
+
+<body>
+    <div id="hasil" style="color:red">
+            <img src="../3. JAVASCIPT/TUGAS/banner2.jpg" alt="" srcset="" height="100px" width="1000px">
+            <hr>
+        <table>
+            <form>
+                <!-- nama -->
+                <tr>
+                    <td>
+                        <label for="" style="color:black">Nama</label>
+
+                    </td>
+                    <td>
+                        <input id="nama" type="text" />
+
+                    </td>
+                </tr>
+                <!-- alamat -->
+                <tr>
+                    <td>
+                        <label for="" style="color:black">Alamat</label>
+
+                    </td>
+                    <td>
+                        <textarea name="" id="alamat" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <!-- TTL -->
+                <tr>
+                        <td>
+                            <label for="" style="color:black">Tanggal Lahir</label>
+    
+                        </td>
+                        <td>
+                            <input type="" id="datepicker">
+                        </td>
+                    </tr>
+    
+                <!-- button -->
+                <tr>
+                    <td>
+                        <input onclick="proses()" type="button" value="Tampilkan" />
+                    </td>
+                </tr>
+
+
+            </form>
+        </table>
+    </div>
+</body>
+</html>

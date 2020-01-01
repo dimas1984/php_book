@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Pengenalan JS</title>
+        <script type="text/javascript">
+            function setParent() {
+                window.opener.document.getElementById("inputanParent").value = document.getElementById("inputanChild").value;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div">
+            <input type="text" name="inputanChild" id="inputanChild"/>
+            <button type="submit" onclick="setParent()">Set Parent!</button>
+        </div>
+    </body>
+</html>
+
